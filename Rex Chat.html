@@ -1460,7 +1460,7 @@ const firebaseConfig = {
     if(currentCallId) update(ref(db, `calls/${currentCallId}`), {status: $('btn-call-accept').classList.contains('hidden')?'ended':'rejected'});
     cleanupCall();
   };
-
+ 
   // Draggable Video
   let isDrag=false, sX, sY, lv=$('local-video');
   lv.onmousedown=lv.ontouchstart=e=>{ isDrag=true; sX=(e.touches?e.touches[0].clientX:e.clientX)-lv.offsetLeft; sY=(e.touches?e.touches[0].clientY:e.clientY)-lv.offsetTop; };
